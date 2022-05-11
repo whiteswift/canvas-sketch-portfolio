@@ -4,25 +4,35 @@
   <style>
     body {
       font-family: sans-serif;
+      text-align: center;
+    }
+
+    ul {
+      padding: unset;
     }
 
     li {
       list-style: none;
     }
+
+    canvas {
+      position: relative;
+    }
   </style>
   <h1>canvas-sketch-portfolio</h1>
+  <main>
+    <ul>
+      <li><a href="sketch-00.html">sketch-00.html</a></li>
+      <li>⚠️ <a href="sketch-02.html">sketch-02.html</a>
+        Epilepsy warning</li>
+      <li><a href="sketch-03.html">sketch-03.html</a></li>
+      <li><a href="sketch-04.html">sketch-04.html</a></li>
+      <li><a href="sketch-05.html">sketch-05.html</a></li>
+      <li><a href="sketch-06.html">sketch-06.html</a></li>
+    </ul>
+    <canvas width="600" height="600"></canvas>
+  </main>
 
-  <ul>
-    <li><a href="sketch-00.html">sketch-00.html</a></li>
-    <li><a href="sketch-02.html">sketch-02.html</a></li>
-    <li><a href="sketch-03.html">sketch-03.html</a></li>
-    <li><a href="sketch-04.html">sketch-04.html</a></li>
-    <li><a href="sketch-05.html">sketch-05.html</a></li>
-    <li><a href="sketch-06.html">sketch-06.html</a></li>
-  </ul>
-
-
-  <canvas width="600" height="600"></canvas>
   <script>
     const canvas = document.querySelector('canvas');
     const context = canvas.getContext('2d');
@@ -39,7 +49,7 @@
 
     for (let i = 0; i < 5; i++) {
       for (let j = 0; j < 5; j++) {
-        x = 50 + (width + gap) * i;
+        x = 110 + (width + gap) * i;
         y = 50 + (height + gap) * j;
 
         context.beginPath();
