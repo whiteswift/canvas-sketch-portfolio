@@ -1,20 +1,33 @@
 <html>
 
 <body>
-  <h1>hello</h1>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    li {
+      list-style: none;
+    }
+  </style>
+  <h1>canvas-sketch-portfolio</h1>
+
+  <ul>
+    <li><a href="sketch-00.html">sketch-00.html</a></li>
+    <li><a href="sketch-02.html">sketch-02.html</a></li>
+    <li><a href="sketch-03.html">sketch-03.html</a></li>
+    <li><a href="sketch-04.html">sketch-04.html</a></li>
+    <li><a href="sketch-05.html">sketch-05.html</a></li>
+    <li><a href="sketch-06.html">sketch-06.html</a></li>
+  </ul>
+
+
   <canvas width="600" height="600"></canvas>
   <script>
-    let canvas = document.querySelector('canvas');
-    let context = canvas.getContext('2d');
-
-    // context.fillStyle = 'blue';
-    // context.fillRect(100, 100, 400, 400);
+    const canvas = document.querySelector('canvas');
+    const context = canvas.getContext('2d');
 
     context.lineWidth = 4;
-
-    // context.beginPath();
-    // context.arc(300, 300, 100, 0, Math.PI * 2);
-    // context.stroke();
 
     const gravity = 9.81;
     let velocity = 0.0;
@@ -38,17 +51,9 @@
           context.rect(x + 8, y + 8, width - 16, height - 16);
           context.stroke();
         }
-
-        setH1(i)
       }
     }
 
-    function setH1(text) {
-      const h1 = document.querySelector('h1');
-      h1.innerHTML = text;
-    }
-
-  // demostika course solution is probably on github already
   </script>
 </body>
 
