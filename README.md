@@ -2,8 +2,4 @@
 
 Portfolio for canvas-sketch projects
 
-[Demo](https://whiteswift.github.io/canvas-sketch-portfolio/)
-
-## TODO
-
-Give sketches more semantic name
+[Portfolio Demos](https://whiteswift.github.io/canvas-sketch-portfolio/)
