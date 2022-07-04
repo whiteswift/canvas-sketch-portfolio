@@ -39,29 +39,43 @@
     const canvas = document.querySelector('canvas');
     const context = canvas.getContext('2d');
 
-    context.lineWidth = 4;
-
     const width = 60;
     const height = 60;
     const gap = 20;
     let x, y;
 
-    for (let i = 0; i < 5; i++) {
-      for (let j = 0; j < 5; j++) {
-        x = 110 + (width + gap) * i;
-        y = 50 + (height + gap) * j;
+    context.lineWidth = 4;
 
-        context.beginPath();
-        context.rect(x, y, width, height);
-        context.stroke();
+    const grd = context.createLinearGradient(100, 100, 200, 0);
+    grd.addColorStop(0, "pink");
+    grd.addColorStop(0.5, "green");
+    grd.addColorStop(1, "blue");
 
-        if (Math.random() > 0.5) {
+    const render = () => {
+      context.clearRect(0, 0, canvas.width, canvas.height);
+
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+          x = 110 + (width + gap) * i;
+          y = 50 + (height + gap) * j;
+
           context.beginPath();
-          context.rect(x + 8, y + 8, width - 16, height - 16);
+          context.strokeStyle = grd;
+          context.rect(x, y, width, height);
           context.stroke();
+
+          if (Math.random() > 0.5) {
+            context.beginPath();
+            // context.strokeStyle = grd;
+            context.rect(x + 8, y + 8, width - 16, height - 16);
+            context.stroke();
+          }
         }
       }
     }
+
+    render()
+    setInterval(render, 1000);
 
   </script>
   <footer>Darryl White</footer>
