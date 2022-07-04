@@ -2,7 +2,7 @@
 
 Portfolio for canvas-sketch projects
 
-[index.html](index.html)
+[Demo](https://whiteswift.github.io/canvas-sketch-portfolio/)
 
 ## TODO
 
