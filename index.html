@@ -18,7 +18,8 @@
         font-size: 52px;
         letter-spacing: 1px;
         color: #fe6fd4;
-        margin-top: 1em;
+        position: relative;
+        margin-top: 120px;
       }
       ul {
         padding: unset;
@@ -28,9 +29,15 @@
       }
       canvas {
         position: relative;
+        /* animation: spin 12s linear infinite; */
       }
       a {
         text-decoration: none;
+      }
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
+        }
       }
     </style>
     <h1>Spilt Milk</h1>
@@ -64,7 +71,7 @@
       const gap = 20;
       let x, y;
 
-      context.lineWidth = 4;
+      context.lineWidth = 7;
 
       const grd = context.createLinearGradient(100, 100, 200, 0);
       grd.addColorStop(0, "pink");
