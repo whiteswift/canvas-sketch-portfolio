@@ -39,6 +39,18 @@
       a {
         text-decoration: none;
       }
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .container > a {
+        display: flex;
+        width: 33%;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+      }
       @keyframes spin {
         100% {
           transform: rotate(360deg);
@@ -47,25 +59,24 @@
     </style>
     <h1>Spilt Milk</h1>
     <main>
-      <ul>
-        <li><a href="flow.html">Flow</a></li>
-        <li><a href="wave-power.html">Wave Power</a></li>
-        <li><a href="glyph-sketch.html">Glyph Sketch</a></li>
-        <li><a href="hahaha.html">ha ha ha</a></li>
-        <li><a href="yotd.html">YOTD</a></li>
-        <li><a href="vortex.html">Vortex</a></li>
-        <li><a href="skew.html">Skew</a></li>
-        <li><a href="watermelon.html">Watermelons</a></li>
-        <br />
-        <li><a href="sketch-00.html">Powerlines</a></li>
-        <li><a href="sketch-02.html">Warp</a></li>
-        <li><a href="sketch-03.html">Molecules</a></li>
-        <li><a href="sketch-05.html">Lalilulelo typeface</a></li>
-        <li><a href="sketch-06.html">Barbican Clouds</a></li>
-        <li><a href="sketch-08.html">Joy Division</a></li>
-        <li><a href="sketch-09.html">Saturn Glyph</a></li>
-        <li><a href="onedge-reprise.html">On Edge Reprise</a></li>
-      </ul>
+      <div class="container">
+        <a href="flow.html">Flow</a>
+        <a href="wave-power.html">Wave Power</a>
+        <a href="glyph-sketch.html">Glyph Sketch</a>
+        <a href="hahaha.html">ha ha ha</a>
+        <a href="yotd.html">YOTD</a>
+        <a href="vortex.html">Vortex</a>
+        <a href="skew.html">Skew</a>
+        <a href="watermelon.html">Watermelons</a>
+        <a href="sketch-00.html">Powerlines</a>
+        <a href="sketch-02.html">Warp</a>
+        <a href="sketch-03.html">Molecules</a>
+        <a href="sketch-05.html">Lalulelo typeface</a>
+        <a href="sketch-06.html">Barbican Clouds</a>
+        <a href="sketch-08.html">Joy ision</a>
+        <a href="sketch-09.html">Saturn Glyph</a>
+        <a href="onedge-reprise.html">On Edge Reprise</a>
+      </div>
       <canvas width="600" height="600"></canvas>
     </main>
 
