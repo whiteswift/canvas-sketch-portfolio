@@ -76,6 +76,7 @@
         position: absolute;
         height: 100%;
         width: 100%;
+        pointer-events: none;
       }
       .hole {
         position: absolute;
@@ -182,8 +183,6 @@
         border-radius: 100%;
         border: 8px solid black;
       }
-      .teeth {
-      }
       .centre-label {
         width: 80px;
         height: 40px;
@@ -202,6 +201,56 @@
         width: 230px;
         rotate: -1deg;
         border-radius: 2px;
+      }
+
+      /* CASSETTE TEETH */
+      .teeth {
+      }
+      .outer-clock-face {
+        position: relative;
+        background: #37ff37;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        animation: spin 3s linear infinite;
+      }
+      .outer-clock-face::after {
+        transform: rotate(90deg);
+      }
+      .outer-clock-face .marking {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        background: #000;
+        z-index: 0;
+        left: 42%;
+      }
+      .outer-clock-face .marking {
+        background: #0b0b0b;
+      }
+      .outer-clock-face .marking.marking-one {
+        transform: rotate(60deg);
+      }
+      .outer-clock-face .marking.marking-two {
+        transform: rotate(120deg);
+      }
+      .outer-clock-face .marking.marking-three {
+        transform: rotate(180deg);
+      }
+      .outer-clock-face .marking.marking-four {
+        transform: rotate(180deg);
+      }
+      .inner-clock-face {
+        position: absolute;
+        top: 12%;
+        left: 12%;
+        width: 75%;
+        height: 75%;
+        background: #37ff37;
+        border-radius: 100%;
+        z-index: 1;
       }
     </style>
     <main>
@@ -224,9 +273,25 @@
           </div>
 
           <div class="mixtape-middle">
-            <div class="tape-reel"></div>
+            <div class="tape-reel">
+              <div class="outer-clock-face">
+                <div class="marking marking-one"></div>
+                <div class="marking marking-two"></div>
+                <div class="marking marking-three"></div>
+                <div class="marking marking-four"></div>
+                <div class="inner-clock-face"></div>
+              </div>
+            </div>
             <div class="centre-label"></div>
-            <div class="tape-reel"></div>
+            <div class="tape-reel">
+              <div class="outer-clock-face">
+                <div class="marking marking-one"></div>
+                <div class="marking marking-two"></div>
+                <div class="marking marking-three"></div>
+                <div class="marking marking-four"></div>
+                <div class="inner-clock-face"></div>
+              </div>
+            </div>
           </div>
 
           <div class="mixtape-bottom">
