@@ -136,7 +136,7 @@
         position: relative;
         width: 30px;
         height: 30px;
-        background: black;
+        background: #1b1b1b;
         color: #bbbdca;
         font-size: 24px;
         font-weight: bold;
@@ -149,7 +149,7 @@
       }
       .time-label {
         top: 18px;
-        left: 150px;
+        left: 124px;
       }
       .details-container {
         display: flex;
@@ -194,7 +194,7 @@
         height: 32px;
         background: white;
         border-radius: 100%;
-        border: 8px solid black;
+        border: 8px solid #1b1b1b;
       }
       .centre-label {
         width: 80px;
@@ -213,10 +213,25 @@
         rotate: -1deg;
         border-radius: 2px 4px 4px 18px;
       }
+      .time-details {
+        position: relative;
+        top: 21px;
+        left: 118px;
+        color: #1b1b1b;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: end;
+        font-weight: bold;
+      }
+      .min-label {
+        position: relative;
+        left: 3px;
+      }
+      p {
+        margin: 0;
+      }
 
       /* CASSETTE TEETH */
-      .teeth {
-      }
       .outer-clock-face {
         position: relative;
         background: #37ff37;
@@ -275,7 +290,7 @@
         }
       }
       footer {
-        margin-top: 46px;
+        margin: 46px;
         letter-spacing: 2px;
         text-decoration: underline;
         text-underline-offset: 10px;
@@ -328,6 +343,10 @@
           </div>
 
           <div class="mixtape-bottom">
+            <div class="time-details">
+              <p>2 x 45</p>
+              <p class="min-label">min.</p>
+            </div>
             <div class="small-label time-label">90</div>
           </div>
         </div>
