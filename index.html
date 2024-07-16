@@ -76,7 +76,8 @@
           rgb(111, 110, 201) 100%
         );
         background-size: 800% 800%;
-        animation: gradientShift 4s linear both infinite;
+        animation: gradientShift 4s linear both infinite,
+          wobble 4s cubic-bezier(0.4, 0, 0.27, 1.18) both infinite;
         height: 250px;
         border-radius: 10px;
         border: 2px solid black;
@@ -287,6 +288,17 @@
         }
         100% {
           background-position: 0% 81%;
+        }
+      }
+      @keyframes wobble {
+        0% {
+          rotate: -10deg;
+        }
+        50% {
+          rotate: 10deg;
+        }
+        100% {
+          rotate: -10deg;
         }
       }
       footer {
