@@ -1,326 +1,326 @@
 <html>
-  <body class="notranslate">
-    <head>
-      <meta charset="utf-8" />
-      <title>Spilt Milk - Portfolio</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="googlebot" content="notranslate" />
-      <meta name="theme-color" content="#37ff37" />
-      <link rel="manifest" href="manifest.json" />
-      <link rel="icon" sizes="144x144" href="favicon.png" />
-      <meta property="og:title" content="Spilt Milk" />
-      <meta property="og:type" content="website" />
-      <meta
-        property="og:url"
-        content="https://whiteswift.github.io/canvas-sketch-portfolio/"
-      />
-      <meta property="og:description" content="Spilt Milk - Portfolio" />
-    </head>
-    <style>
-      html {
-        width: 100%;
+  <head>
+    <meta charset="utf-8" />
+    <title>Spilt Milk - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="googlebot" content="notranslate" />
+    <meta name="theme-color" content="#37ff37" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" sizes="144x144" href="favicon.png" />
+    <meta property="og:title" content="Spilt Milk" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://whiteswift.github.io/canvas-sketch-portfolio/"
+    />
+    <meta property="og:description" content="Spilt Milk - Portfolio" />
+  </head>
+  <style>
+    html {
+      width: 100%;
+    }
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background: #37ff37;
+    }
+    h1 {
+      font-family: monospace;
+      font-size: 30px;
+      letter-spacing: 4px;
+      color: #fe6fd4;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 10px;
+    }
+    ul {
+      padding: unset;
+    }
+    li {
+      list-style: none;
+    }
+    canvas {
+      position: relative;
+      /* animation: spin 12s linear infinite; */
+    }
+    a {
+      text-decoration: none;
+    }
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+    }
+    .container > a {
+      display: flex;
+      width: 33%;
+      height: 50px;
+      align-items: center;
+      justify-content: center;
+      background: #faff00;
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-family: monospace;
+    }
+    @keyframes spin {
+      100% {
+        transform: rotate(360deg);
       }
-      body {
-        font-family: sans-serif;
-        text-align: center;
-        background: #37ff37;
-      }
-      h1 {
-        font-family: monospace;
-        font-size: 30px;
-        letter-spacing: 4px;
-        color: #fe6fd4;
-      }
-      main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        row-gap: 10px;
-      }
-      ul {
-        padding: unset;
-      }
-      li {
-        list-style: none;
-      }
-      canvas {
-        position: relative;
-        /* animation: spin 12s linear infinite; */
-      }
-      a {
-        text-decoration: none;
-      }
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 5px;
-      }
-      .container > a {
-        display: flex;
-        width: 33%;
-        height: 50px;
-        align-items: center;
-        justify-content: center;
-        background: #faff00;
-        font-weight: bold;
-        letter-spacing: 2px;
-        font-family: monospace;
-      }
-      @keyframes spin {
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      .cassette {
-        display: flex;
-        justify-content: center;
-        position: relative;
-        width: 390px;
-        background: linear-gradient(
-          244deg,
-          rgb(110, 201, 196) 15%,
-          rgb(227 157 92) 45%,
-          rgb(111, 110, 201) 100%
-        );
-        background-size: 800% 800%;
-        animation: gradientShift 4s linear both infinite,
-          wobble 5s cubic-bezier(0.4, 0, 0.27, 1.18) both infinite;
-        height: 250px;
-        border-radius: 10px;
-        border: 2px solid black;
-        margin: 12px 0;
-        box-shadow: 5px 4px 5px -3px rgb(0, 0, 0);
-        rotate: -2deg;
-      }
-      .holes {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        pointer-events: none;
-      }
-      .hole {
-        position: absolute;
-        width: 14px;
-        height: 14px;
-        border: 2px solid black;
-        border-radius: 10px;
-        background: rgb(150, 200, 185);
-      }
-      .top-left {
-        top: 10px;
-        left: 10px;
-      }
-      .top-right {
-        top: 10px;
-        right: 10px;
-      }
-      .bottom-left {
-        bottom: 10px;
-        left: 10px;
-      }
-      .bottom-right {
-        bottom: 10px;
-        right: 10px;
-      }
-      .mixtape-inner {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 62%;
-        width: 88%;
-        margin: 30px auto 0;
-        background: #bbbdca;
-        border-radius: 10px;
-        border: 2px solid black;
-      }
-      .mixtape-header {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 42px;
-      }
-      .small-label {
-        display: flex;
-        position: relative;
-        width: 30px;
-        height: 30px;
-        background: #1b1b1b;
-        color: #bbbdca;
-        font-size: 24px;
-        font-weight: bold;
-        align-items: center;
-        justify-content: center;
-      }
-      .side-label {
-        top: 6px;
-        left: 6px;
-      }
-      .time-label {
-        top: 18px;
-        left: 124px;
-      }
-      .details-container {
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        row-gap: 8px;
-        margin-top: 8px;
-      }
-      .details-container > div:nth-child(2) {
-        background: green;
-      }
-      .details-container > div:nth-child(3) {
-        background: red;
-      }
-      .details-line {
-        background: #ff9800;
-        width: 90%;
-        height: 2px;
-        border: 1px solid black;
-        position: relative;
-        left: 12px;
-      }
-      .mixtape-middle {
-        display: flex;
-        border-radius: 8px;
-        width: 90%;
-        background: #383c48;
-        height: 58px;
-        column-gap: 18px;
-        align-items: center;
-        justify-content: center;
-      }
-      .mixtape-bottom {
-        display: flex;
-      }
-      .mixtape-label {
-        position: absolute;
-        bottom: 0;
-      }
-      .tape-reel {
-        width: 32px;
-        height: 32px;
-        background: white;
-        border-radius: 100%;
-        border: 8px solid #1b1b1b;
-      }
-      .centre-label {
-        width: 80px;
-        height: 40px;
-        background: white;
-      }
-      .title-container {
-        background: linear-gradient(
-          181deg,
-          rgb(237 232 232 / 88%) 35%,
-          rgb(216 216 216 / 70%) 100%
-        );
-        position: relative;
-        top: 6px;
-        width: 252px;
-        rotate: -1deg;
-        border-radius: 2px 4px 4px 13px;
-      }
-      .time-details {
-        position: relative;
-        top: 21px;
-        left: 118px;
-        color: #1b1b1b;
-        font-size: 12px;
-        line-height: 12px;
-        text-align: end;
-        font-weight: bold;
-      }
-      .min-label {
-        position: relative;
-        left: 3px;
-      }
-      p {
-        margin: 0;
-      }
+    }
+    .cassette {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      width: 390px;
+      background: linear-gradient(
+        244deg,
+        rgb(110, 201, 196) 15%,
+        rgb(227 157 92) 45%,
+        rgb(111, 110, 201) 100%
+      );
+      background-size: 800% 800%;
+      animation: gradientShift 4s linear both infinite,
+        wobble 5s cubic-bezier(0.4, 0, 0.27, 1.18) both infinite;
+      height: 250px;
+      border-radius: 10px;
+      border: 2px solid black;
+      margin: 12px 0;
+      box-shadow: 5px 4px 5px -3px rgb(0, 0, 0);
+      rotate: -2deg;
+    }
+    .holes {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      pointer-events: none;
+    }
+    .hole {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border: 2px solid black;
+      border-radius: 10px;
+      background: rgb(150, 200, 185);
+    }
+    .top-left {
+      top: 10px;
+      left: 10px;
+    }
+    .top-right {
+      top: 10px;
+      right: 10px;
+    }
+    .bottom-left {
+      bottom: 10px;
+      left: 10px;
+    }
+    .bottom-right {
+      bottom: 10px;
+      right: 10px;
+    }
+    .mixtape-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 62%;
+      width: 88%;
+      margin: 30px auto 0;
+      background: #bbbdca;
+      border-radius: 10px;
+      border: 2px solid black;
+    }
+    .mixtape-header {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 42px;
+    }
+    .small-label {
+      display: flex;
+      position: relative;
+      width: 30px;
+      height: 30px;
+      background: #1b1b1b;
+      color: #bbbdca;
+      font-size: 24px;
+      font-weight: bold;
+      align-items: center;
+      justify-content: center;
+    }
+    .side-label {
+      top: 6px;
+      left: 6px;
+    }
+    .time-label {
+      top: 18px;
+      left: 124px;
+    }
+    .details-container {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      row-gap: 8px;
+      margin-top: 8px;
+    }
+    .details-container > div:nth-child(2) {
+      background: green;
+    }
+    .details-container > div:nth-child(3) {
+      background: red;
+    }
+    .details-line {
+      background: #ff9800;
+      width: 90%;
+      height: 2px;
+      border: 1px solid black;
+      position: relative;
+      left: 12px;
+    }
+    .mixtape-middle {
+      display: flex;
+      border-radius: 8px;
+      width: 90%;
+      background: #383c48;
+      height: 58px;
+      column-gap: 18px;
+      align-items: center;
+      justify-content: center;
+    }
+    .mixtape-bottom {
+      display: flex;
+    }
+    .mixtape-label {
+      position: absolute;
+      bottom: 0;
+    }
+    .tape-reel {
+      width: 32px;
+      height: 32px;
+      background: white;
+      border-radius: 100%;
+      border: 8px solid #1b1b1b;
+    }
+    .centre-label {
+      width: 80px;
+      height: 40px;
+      background: white;
+    }
+    .title-container {
+      background: linear-gradient(
+        181deg,
+        rgb(237 232 232 / 88%) 35%,
+        rgb(216 216 216 / 70%) 100%
+      );
+      position: relative;
+      top: 6px;
+      width: 252px;
+      rotate: -1deg;
+      border-radius: 2px 4px 4px 13px;
+    }
+    .time-details {
+      position: relative;
+      top: 21px;
+      left: 118px;
+      color: #1b1b1b;
+      font-size: 12px;
+      line-height: 12px;
+      text-align: end;
+      font-weight: bold;
+    }
+    .min-label {
+      position: relative;
+      left: 3px;
+    }
+    p {
+      margin: 0;
+    }
 
-      /* CASSETTE TEETH */
-      .outer-clock-face {
-        position: relative;
-        background: #37ff37;
-        overflow: hidden;
-        width: 100%;
-        height: 100%;
-        border-radius: 100%;
-        animation: spin 3s linear infinite;
+    /* CASSETTE TEETH */
+    .outer-clock-face {
+      position: relative;
+      background: #37ff37;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      animation: spin 3s linear infinite;
+    }
+    .outer-clock-face::after {
+      transform: rotate(90deg);
+    }
+    .outer-clock-face .marking {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 100%;
+      background: #000;
+      z-index: 0;
+      left: 42%;
+    }
+    .outer-clock-face .marking {
+      background: #0b0b0b;
+    }
+    .outer-clock-face .marking.marking-one {
+      transform: rotate(60deg);
+    }
+    .outer-clock-face .marking.marking-two {
+      transform: rotate(120deg);
+    }
+    .outer-clock-face .marking.marking-three {
+      transform: rotate(180deg);
+    }
+    .outer-clock-face .marking.marking-four {
+      transform: rotate(180deg);
+    }
+    .inner-clock-face {
+      position: absolute;
+      top: 12%;
+      left: 12%;
+      width: 75%;
+      height: 75%;
+      background: #37ff37;
+      border-radius: 100%;
+      z-index: 1;
+    }
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 81%;
       }
-      .outer-clock-face::after {
-        transform: rotate(90deg);
+      50% {
+        background-position: 100% 20%;
       }
-      .outer-clock-face .marking {
-        content: "";
-        position: absolute;
-        width: 5px;
-        height: 100%;
-        background: #000;
-        z-index: 0;
-        left: 42%;
+      100% {
+        background-position: 0% 81%;
       }
-      .outer-clock-face .marking {
-        background: #0b0b0b;
+    }
+    @keyframes wobble {
+      0% {
+        rotate: -10deg;
       }
-      .outer-clock-face .marking.marking-one {
-        transform: rotate(60deg);
+      50% {
+        rotate: 10deg;
       }
-      .outer-clock-face .marking.marking-two {
-        transform: rotate(120deg);
+      100% {
+        rotate: -10deg;
       }
-      .outer-clock-face .marking.marking-three {
-        transform: rotate(180deg);
-      }
-      .outer-clock-face .marking.marking-four {
-        transform: rotate(180deg);
-      }
-      .inner-clock-face {
-        position: absolute;
-        top: 12%;
-        left: 12%;
-        width: 75%;
-        height: 75%;
-        background: #37ff37;
-        border-radius: 100%;
-        z-index: 1;
-      }
-      @keyframes gradientShift {
-        0% {
-          background-position: 0% 81%;
-        }
-        50% {
-          background-position: 100% 20%;
-        }
-        100% {
-          background-position: 0% 81%;
-        }
-      }
-      @keyframes wobble {
-        0% {
-          rotate: -10deg;
-        }
-        50% {
-          rotate: 10deg;
-        }
-        100% {
-          rotate: -10deg;
-        }
-      }
-      footer {
-        margin: 46px;
-        letter-spacing: 2px;
-        text-decoration: underline;
-        text-underline-offset: 10px;
-        font-size: 24px;
-        color: red;
-      }
-      footer > a {
-        color: #ff0000;
-      }
-    </style>
+    }
+    footer {
+      margin: 46px;
+      letter-spacing: 2px;
+      text-decoration: underline;
+      text-underline-offset: 10px;
+      font-size: 24px;
+      color: red;
+    }
+    footer > a {
+      color: #ff0000;
+    }
+  </style>
+  <body class="notranslate">
     <main>
       <div class="cassette">
         <div class="holes">
