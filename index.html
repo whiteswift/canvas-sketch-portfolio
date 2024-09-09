@@ -71,15 +71,23 @@
       flex-direction: column;
       box-shadow: 2px 2px 8px #00ddcd;
     }
+    .container > a > img {
+      height: 33vw;
+      width: 33vw;
+    }
+
+    /* DESKTOP */
     @media only screen and (min-width: 768px) {
       .container > a {
         width: 28vw;
       }
+
+      .container > a > img {
+        height: 25vw;
+        width: 25vw;
+      }
     }
-    .container > a > img {
-      height: 25vw;
-      width: 25vw;
-    }
+
     @keyframes spin {
       100% {
         transform: rotate(360deg);
